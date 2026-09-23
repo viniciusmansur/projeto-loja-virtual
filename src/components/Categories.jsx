@@ -1,28 +1,19 @@
+import CategoryCard from "./CategoryCard"
+import { FaTshirt } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
+import { GiConverseShoe } from "react-icons/gi";
+import { RiJewelryFill } from "react-icons/ri";
 
 const Categories = () => {
 
     return (
         <section className="categories">
             <h2>Categorias</h2>
-
             <div className="category-list">
-                    <div className="category-card">
-                        <span className="category-icon">👕</span>
-                        <p>Roupas</p>
-                    </div>
-                    <div className="category-card">
-                        <span className="category-icon">📱</span>
-                        <p>Eletrônicos</p>
-                    </div>
-                    <div className="category-card">
-                        <span className="category-icon">👟</span>
-                        <p>Calçados</p>
-                    </div>
-
-                <div className="category-card">
-                    <span className="category-icon">🎒</span>
-                    <p>Acessórios</p>
-                </div>
+                <CategoryCard icon= {<FaTshirt/>} categoryName="Roupas"/>
+                <CategoryCard icon= {<FaPhone />} categoryName="Eletrônicos"/>
+                <CategoryCard icon={<GiConverseShoe />} categoryName="Calçados"/>
+                <CategoryCard icon={<RiJewelryFill />} categoryName="Acessórios"/>
             </div>
         </section>
     )

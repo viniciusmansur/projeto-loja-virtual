@@ -1,3 +1,5 @@
+import ProductCard from "./ProductCard"
+
 const Products = ({setCartCount}) => {
 
     const addToCart = () => {
@@ -8,14 +10,14 @@ const Products = ({setCartCount}) => {
         <section id="produtos" className="products">
             <h2>Produtos em destaque</h2>
             <div className="product-list">
-                <div className="product-card">
-                    <img src="https://placehold.co/240x240/aa3bff/ffffff?text=Tenis" alt="Tênis esportivo" />
-                    <p className="product-category">Calçados</p>
-                    <h3>Tênis Esportivo</h3>
-                    <p className="product-rating">⭐⭐⭐⭐☆ (4.5)</p>
-                    <p className="product-price">R$ 299,90</p>
-                    <button className="btn-secondary" onClick={addToCart}>Adicionar ao carrinho</button>
-                </div>
+                 <ProductCard
+                  image="https://placehold.co/240x240/aa3bff/ffffff?text=Tenis"
+                  category="Calçados"
+                  productName="Tênis Esportivo"
+                  rating="⭐⭐⭐⭐☆ (4.5)"
+                  price="$ 299,90"
+                  addToCart={addToCart}
+                  />
 
                 <div className="product-card">
                     <img src="https://placehold.co/240x240/3b82f6/ffffff?text=Fone" alt="Fone de ouvido bluetooth" />
